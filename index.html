@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="js-form" class="m-10" autocomplete="off">
+      <div class="flex justify-evenly mb-[150px]">
+        <input
+          id="js-input"
+          class="py-[5px] px-5 border rounded-[20px] outline-none"
+          required
+          type="number"
+          placeholder="Sizning pulingiz qancha"
+        />
+        <select
+          id="js-select"
+          required
+          class="py-[5px] px-5 border rounded-[20px] outline-none appearance-none"
+        >
+          <option selected hidden>Valyuta tanlang</option>
+          <option value="12571.90">USD</option>
+          <option value="143.83">RUR</option>
+          <option value="13465.76">EUR</option>
+          <option value="26.61">KZT</option>
+          <option value="1728.95">CNY</option>
+          <option value="771616400">BTC</option>
+        </select>
+      </div>
+      <button
+        type="submit"
+        class="block w-[150px] mx-auto py-[5px] px-5 border rounded-[20px] outline-none"
+      >
+        Hisoblash
+      </button>
+    </form>
+    <h1 class="text-[50px] text-center mb-5">Javob:</h1>
+    <p id="js-answer" class="text-center text-[20px]"></p>
+    <script src="./script.js"></script>
+  </body>
+</html>
